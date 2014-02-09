@@ -1,0 +1,7 @@
+c:\users\john.bales\documents\visual studio 2013\Projects\NinjectSimpleSample\App.Domain\bin\Debug\App.Domain.dll
+c:\users\john.bales\documents\visual studio 2013\Projects\NinjectSimpleSample\App.Domain\bin\Debug\App.Domain.pdb
+c:\users\john.bales\documents\visual studio 2013\Projects\NinjectSimpleSample\App.Domain\bin\Debug\Core.dll
+c:\users\john.bales\documents\visual studio 2013\Projects\NinjectSimpleSample\App.Domain\bin\Debug\Core.pdb
+c:\users\john.bales\documents\visual studio 2013\Projects\NinjectSimpleSample\App.Domain\obj\Debug\App.Domain.csprojResolveAssemblyReference.cache
+c:\users\john.bales\documents\visual studio 2013\Projects\NinjectSimpleSample\App.Domain\obj\Debug\App.Domain.dll
+c:\users\john.bales\documents\visual studio 2013\Projects\NinjectSimpleSample\App.Domain\obj\Debug\App.Domain.pdb

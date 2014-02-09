@@ -1,0 +1,14 @@
+c:\users\john.bales\documents\visual studio 2013\Projects\NinjectSimpleSample\App.Infrastructure\bin\Debug\App.Infrastructure.dll
+c:\users\john.bales\documents\visual studio 2013\Projects\NinjectSimpleSample\App.Infrastructure\bin\Debug\App.Infrastructure.pdb
+c:\users\john.bales\documents\visual studio 2013\Projects\NinjectSimpleSample\App.Infrastructure\bin\Debug\App.Data.dll
+c:\users\john.bales\documents\visual studio 2013\Projects\NinjectSimpleSample\App.Infrastructure\bin\Debug\App.Domain.dll
+c:\users\john.bales\documents\visual studio 2013\Projects\NinjectSimpleSample\App.Infrastructure\bin\Debug\Core.dll
+c:\users\john.bales\documents\visual studio 2013\Projects\NinjectSimpleSample\App.Infrastructure\bin\Debug\Ninject.dll
+c:\users\john.bales\documents\visual studio 2013\Projects\NinjectSimpleSample\App.Infrastructure\bin\Debug\App.Data.pdb
+c:\users\john.bales\documents\visual studio 2013\Projects\NinjectSimpleSample\App.Infrastructure\bin\Debug\App.Domain.pdb
+c:\users\john.bales\documents\visual studio 2013\Projects\NinjectSimpleSample\App.Infrastructure\bin\Debug\Core.pdb
+c:\users\john.bales\documents\visual studio 2013\Projects\NinjectSimpleSample\App.Infrastructure\bin\Debug\Ninject.pdb
+c:\users\john.bales\documents\visual studio 2013\Projects\NinjectSimpleSample\App.Infrastructure\bin\Debug\Ninject.xml
+c:\users\john.bales\documents\visual studio 2013\Projects\NinjectSimpleSample\App.Infrastructure\obj\Debug\App.Infrastructure.csprojResolveAssemblyReference.cache
+c:\users\john.bales\documents\visual studio 2013\Projects\NinjectSimpleSample\App.Infrastructure\obj\Debug\App.Infrastructure.dll
+c:\users\john.bales\documents\visual studio 2013\Projects\NinjectSimpleSample\App.Infrastructure\obj\Debug\App.Infrastructure.pdb
