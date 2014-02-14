@@ -14,45 +14,45 @@ namespace App.Data.DAOs
             {
                 Id = 1,
                 FirstName = "John",
-                LastName = "Bales",
-                EmailAddress = "johnbales@cox.net",
+                LastName = "Doe",
+                EmailAddress = "jdoe@email.net",
 
                 Address = new AddressDTO
                 {
-                    Street1 = "9644 Seth Lane",
-                    City = "Santee",
-                    State = "CA",
-                    ZipCode = "92071"
+                    Street1 = "1234 Main Street",
+                    City = "Somewhere",
+                    State = "ID",
+                    ZipCode = "12345"
                 },
 
                 Phone = new PhoneDTO
                 {
-                    AreaCode = 619,
-                    Prefix = 749,
-                    Sufix = 2322
+                    AreaCode = 123,
+                    Prefix = 456,
+                    Sufix = 7890
                 }
             });
 
             people.Add(new PersonDTO
             {
                 Id = 2,
-                FirstName = "Michelle",
-                LastName = "Bales",
-                EmailAddress = "michelleis@cox.net",
+                FirstName = "Jane",
+                LastName = "Doe",
+                EmailAddress = "janeDoe@email.net",
 
                 Address = new AddressDTO
                 {
-                    Street1 = "9644 Seth Lane",
-                    City = "Santee",
-                    State = "CA",
-                    ZipCode = "92071"
+                    Street1 = "4321 Mystery Lane",
+                    City = "Yourtown",
+                    State = "OH",
+                    ZipCode = "74632"
                 },
 
                 Phone = new PhoneDTO
                 {
-                    AreaCode = 619,
-                    Prefix = 749,
-                    Sufix = 2322
+                    AreaCode = 321,
+                    Prefix = 654,
+                    Sufix = 0987
                 }
             });
 
