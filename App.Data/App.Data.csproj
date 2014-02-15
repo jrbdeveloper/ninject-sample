@@ -72,7 +72,6 @@
     <Compile Include="Company_GetById_Result.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAOs\FilterDAO.cs" />
     <Compile Include="DAOs\PersonDAO.cs" />
     <Compile Include="Email.cs">
       <DependentUpon>Model.tt</DependentUpon>
