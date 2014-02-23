@@ -8,7 +8,6 @@ namespace App.Infrastructure.DIModules
     {
         public override void Load()
         {
-            Bind<IFilterDO>().To<FilterDO>();
             Bind<IPersonDO>().To<PersonDO>();
         }
     }

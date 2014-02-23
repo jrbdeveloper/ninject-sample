@@ -12,3 +12,5 @@ c:\users\john.bales\documents\visual studio 2013\Projects\NinjectSimpleSample\Ap
 c:\users\john.bales\documents\visual studio 2013\Projects\NinjectSimpleSample\App.Infrastructure\obj\Debug\App.Infrastructure.csprojResolveAssemblyReference.cache
 c:\users\john.bales\documents\visual studio 2013\Projects\NinjectSimpleSample\App.Infrastructure\obj\Debug\App.Infrastructure.dll
 c:\users\john.bales\documents\visual studio 2013\Projects\NinjectSimpleSample\App.Infrastructure\obj\Debug\App.Infrastructure.pdb
+C:\Users\John.Bales\documents\visual studio 2013\Projects\NinjectSimpleSample\App.Infrastructure\bin\Debug\EntityFramework.dll
+C:\Users\John.Bales\documents\visual studio 2013\Projects\NinjectSimpleSample\App.Infrastructure\bin\Debug\EntityFramework.xml

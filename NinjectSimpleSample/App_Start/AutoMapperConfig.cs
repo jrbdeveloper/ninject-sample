@@ -12,7 +12,6 @@ namespace NinjectSimpleSample.App_Start
     {
         public static void RegisterMaps()
         {
-            Mapper.CreateMap<FilterDTO, FilterModel>();
             Mapper.CreateMap<PersonDTO, PersonModel>();
         }
     }

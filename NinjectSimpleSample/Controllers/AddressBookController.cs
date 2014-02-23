@@ -23,7 +23,9 @@ namespace NinjectSimpleSample.Controllers
 
         public ActionResult Index()
         {
-            var model = Mapper.Map<List<PersonModel>>(_personDomain.GetAddressBook());
+            //var model = Mapper.Map<List<PersonModel>>(_personDomain.GetAddressBook());
+            //return View(model);
+            var model = Mapper.Map<List<PersonModel>>(_personDomain.GetFromRepo());
             return View(model);
         }
 

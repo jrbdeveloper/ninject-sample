@@ -9,12 +9,14 @@ namespace App.Domain
     {
         #region Member Variables
         private readonly IPersonDAO _personDAO;
+        private readonly IPersonRepo _personRepo;
         #endregion
 
         #region Constructor
-        public PersonDO(IPersonDAO personDAO)
+        public PersonDO(IPersonDAO personDAO, IPersonRepo personRepo)
         {
             _personDAO = personDAO;
+            _personRepo = personRepo;
         }
         #endregion
 
@@ -22,6 +24,11 @@ namespace App.Domain
         public List<PersonDTO> GetAddressBook()
         {
             return _personDAO.GetAddressBook();
+        }
+
+        public List<PersonDTO> GetFromRepo()
+        {
+            return _personRepo.GetPeople();
         }
         #endregion
     }

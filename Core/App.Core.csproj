@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contracts\Data\IPersonDAO.cs" />
+    <Compile Include="Contracts\Data\IPersonRepo.cs" />
     <Compile Include="Contracts\Domain\IPersonDO.cs" />
     <Compile Include="DTOs\AddressDTO.cs" />
     <Compile Include="DTOs\PersonDTO.cs" />

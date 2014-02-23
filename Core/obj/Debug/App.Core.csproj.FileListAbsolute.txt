@@ -2,3 +2,4 @@ c:\users\john.bales\documents\visual studio 2013\Projects\NinjectSimpleSample\Co
 c:\users\john.bales\documents\visual studio 2013\Projects\NinjectSimpleSample\Core\bin\Debug\Core.pdb
 c:\users\john.bales\documents\visual studio 2013\Projects\NinjectSimpleSample\Core\obj\Debug\Core.dll
 c:\users\john.bales\documents\visual studio 2013\Projects\NinjectSimpleSample\Core\obj\Debug\Core.pdb
+C:\Users\John.Bales\documents\visual studio 2013\Projects\NinjectSimpleSample\Core\obj\Debug\App.Core.csprojResolveAssemblyReference.cache

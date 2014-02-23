@@ -1,5 +1,6 @@
 ﻿using App.Core.Contracts.Data;
 using App.Data.DAOs;
+using App.Data.Repos;
 using Ninject.Modules;
 
 namespace App.Infrastructure.DIModules
@@ -8,8 +9,8 @@ namespace App.Infrastructure.DIModules
     {
         public override void Load()
         {
-            Bind<IFilterDAO>().To<FilterDAO>();
             Bind<IPersonDAO>().To<PersonDAO>();
+            Bind<IPersonRepo>().To<PersonRepo>();
         }
     }
 }

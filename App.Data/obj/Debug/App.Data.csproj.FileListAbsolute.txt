@@ -5,3 +5,8 @@ c:\users\john.bales\documents\visual studio 2013\Projects\NinjectSimpleSample\Ap
 c:\users\john.bales\documents\visual studio 2013\Projects\NinjectSimpleSample\App.Data\obj\Debug\App.Data.csprojResolveAssemblyReference.cache
 c:\users\john.bales\documents\visual studio 2013\Projects\NinjectSimpleSample\App.Data\obj\Debug\App.Data.dll
 c:\users\john.bales\documents\visual studio 2013\Projects\NinjectSimpleSample\App.Data\obj\Debug\App.Data.pdb
+C:\Users\John.Bales\documents\visual studio 2013\Projects\NinjectSimpleSample\App.Data\bin\Debug\App.Data.dll.config
+C:\Users\John.Bales\documents\visual studio 2013\Projects\NinjectSimpleSample\App.Data\bin\Debug\EntityFramework.dll
+C:\Users\John.Bales\documents\visual studio 2013\Projects\NinjectSimpleSample\App.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\John.Bales\documents\visual studio 2013\Projects\NinjectSimpleSample\App.Data\bin\Debug\EntityFramework.xml
+C:\Users\John.Bales\documents\visual studio 2013\Projects\NinjectSimpleSample\App.Data\bin\Debug\EntityFramework.SqlServer.xml
