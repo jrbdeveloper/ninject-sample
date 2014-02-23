@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MVCExampleModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Address">
+    <Key>
+      <PropertyRef Name="AddressId" />
+    </Key>
+    <Property Name="AddressId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PersonId" Type="Int32" />
+    <Property Name="Street1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Street2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ZipCode" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="AddressType" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="Biometric">
+    <Key>
+      <PropertyRef Name="BiometricId" />
+    </Key>
+    <Property Name="BiometricId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PersonId" Type="Int32" />
+    <Property Name="Height" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Weight" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DOB" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="HairColor" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="EyeColor" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="CompanyId" />
+    </Key>
+    <Property Name="CompanyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PersonId" Type="Int32" />
+    <Property Name="AddressId" Type="Int32" />
+    <Property Name="PhoneId" Type="Int32" />
+    <Property Name="EmailId" Type="Int32" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="Email">
+    <Key>
+      <PropertyRef Name="EmailId" />
+    </Key>
+    <Property Name="EmailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PersonId" Type="Int32" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EmailType" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="Person">
+    <Key>
+      <PropertyRef Name="PersonId" />
+    </Key>
+    <Property Name="PersonId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BiometricId" Type="Int32" />
+    <Property Name="AddressId" Type="Int32" />
+    <Property Name="PhoneId" Type="Int32" />
+    <Property Name="EmailId" Type="Int32" />
+    <Property Name="CompanyId" Type="Int32" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="Phone">
+    <Key>
+      <PropertyRef Name="PhoneId" />
+    </Key>
+    <Property Name="PhoneId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PersonId" Type="Int32" />
+    <Property Name="AreaCode" Type="Int32" />
+    <Property Name="Prefix" Type="Int32" />
+    <Property Name="Sufix" Type="Int32" />
+    <Property Name="PhoneType" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="MVCExampleEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Addresses" EntityType="Self.Address" />
+    <EntitySet Name="Biometrics" EntityType="Self.Biometric" />
+    <EntitySet Name="Companies" EntityType="Self.Company" />
+    <EntitySet Name="Emails" EntityType="Self.Email" />
+    <EntitySet Name="People" EntityType="Self.Person" />
+    <EntitySet Name="Phones" EntityType="Self.Phone" />
+    <FunctionImport Name="Address_Delete">
+      <Parameter Name="ID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Address_GetAllByPersonId" ReturnType="Collection(MVCExampleModel.Address_GetAllByPersonId_Result)">
+      <Parameter Name="PersonId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Address_GetById" ReturnType="Collection(MVCExampleModel.Address_GetById_Result)">
+      <Parameter Name="ID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Address_Save">
+      <Parameter Name="ID" Mode="In" Type="Int32" />
+      <Parameter Name="PersonId" Mode="In" Type="Int32" />
+      <Parameter Name="AddressStreet1" Mode="In" Type="String" />
+      <Parameter Name="AddressStreet2" Mode="In" Type="String" />
+      <Parameter Name="AddressCity" Mode="In" Type="String" />
+      <Parameter Name="AddressState" Mode="In" Type="String" />
+      <Parameter Name="AddressZip" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Biometrics_GetById" ReturnType="Collection(MVCExampleModel.Biometrics_GetById_Result)">
+      <Parameter Name="ID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Company_Delete">
+      <Parameter Name="ID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Company_GetAll" ReturnType="Collection(MVCExampleModel.Company_GetAll_Result)" />
+    <FunctionImport Name="Company_GetById" ReturnType="Collection(MVCExampleModel.Company_GetById_Result)">
+      <Parameter Name="ID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Company_Save">
+      <Parameter Name="ID" Mode="In" Type="Int32" />
+      <Parameter Name="Name" Mode="In" Type="String" />
+      <Parameter Name="PhoneId" Mode="In" Type="String" />
+      <Parameter Name="EmailId" Mode="In" Type="String" />
+      <Parameter Name="AddressID" Mode="In" Type="Int32" />
+      <Parameter Name="PhoneAreaCode" Mode="In" Type="Int32" />
+      <Parameter Name="PhonePrefix" Mode="In" Type="Int32" />
+      <Parameter Name="PhoneSufix" Mode="In" Type="Int32" />
+      <Parameter Name="EmailAddress" Mode="In" Type="String" />
+      <Parameter Name="AddressStreet1" Mode="In" Type="String" />
+      <Parameter Name="AddressStreet2" Mode="In" Type="String" />
+      <Parameter Name="AddressCity" Mode="In" Type="String" />
+      <Parameter Name="AddressState" Mode="In" Type="String" />
+      <Parameter Name="AddressZip" Mode="In" Type="String" />
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Email_Delete">
+      <Parameter Name="ID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Email_GetAllByPersonId" ReturnType="Collection(MVCExampleModel.Email_GetAllByPersonId_Result)">
+      <Parameter Name="PersonId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Email_GetById" ReturnType="Collection(MVCExampleModel.Email_GetById_Result)">
+      <Parameter Name="ID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Email_Save">
+      <Parameter Name="ID" Mode="In" Type="Int32" />
+      <Parameter Name="PersonId" Mode="In" Type="Int32" />
+      <Parameter Name="Address" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="People_GetAll" ReturnType="Collection(MVCExampleModel.People_GetAll_Result)" />
+    <FunctionImport Name="Person_Delete">
+      <Parameter Name="ID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Person_GetById" ReturnType="Collection(MVCExampleModel.Person_GetById_Result)">
+      <Parameter Name="ID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Person_Save">
+      <Parameter Name="ID" Mode="In" Type="Int32" />
+      <Parameter Name="BiometricId" Mode="In" Type="Int32" />
+      <Parameter Name="FirstName" Mode="In" Type="String" />
+      <Parameter Name="LastName" Mode="In" Type="String" />
+      <Parameter Name="Height" Mode="In" Type="String" />
+      <Parameter Name="Weight" Mode="In" Type="String" />
+      <Parameter Name="DOB" Mode="In" Type="String" />
+      <Parameter Name="HairColor" Mode="In" Type="String" />
+      <Parameter Name="EyeColor" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Phone_Delete">
+      <Parameter Name="ID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Phone_GetAllByPersonId" ReturnType="Collection(MVCExampleModel.Phone_GetAllByPersonId_Result)">
+      <Parameter Name="PersonId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Phone_GetById" ReturnType="Collection(MVCExampleModel.Phone_GetById_Result)">
+      <Parameter Name="ID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Phone_Save">
+      <Parameter Name="ID" Mode="In" Type="Int32" />
+      <Parameter Name="PersonId" Mode="In" Type="Int32" />
+      <Parameter Name="Areacode" Mode="In" Type="Int32" />
+      <Parameter Name="Prefix" Mode="In" Type="Int32" />
+      <Parameter Name="Sufix" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="Address_GetAllByPersonId_Result">
+    <Property Type="Int32" Name="AddressId" Nullable="false" />
+    <Property Type="Int32" Name="PersonId" Nullable="true" />
+    <Property Type="String" Name="Street1" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Street2" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="City" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="State" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="ZipCode" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="AddressType" Nullable="true" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="Address_GetById_Result">
+    <Property Type="Int32" Name="AddressId" Nullable="false" />
+    <Property Type="Int32" Name="PersonId" Nullable="true" />
+    <Property Type="String" Name="Street1" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Street2" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="City" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="State" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="ZipCode" Nullable="true" MaxLength="15" />
+  </ComplexType>
+  <ComplexType Name="Biometrics_GetById_Result">
+    <Property Type="Int32" Name="BiometricId" Nullable="false" />
+    <Property Type="String" Name="Height" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Weight" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DOB" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="HairColor" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="EyeColor" Nullable="true" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="Company_GetAll_Result">
+    <Property Type="Int32" Name="CompanyId" Nullable="false" />
+    <Property Type="String" Name="CompanyName" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="PersonId" Nullable="true" />
+    <Property Type="String" Name="OwnerFirstName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="OwnerLastName" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="AddressId" Nullable="true" />
+    <Property Type="String" Name="Street1" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Street2" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="City" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="State" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="ZipCode" Nullable="true" MaxLength="15" />
+    <Property Type="Int32" Name="PhoneId" Nullable="true" />
+    <Property Type="Int32" Name="AreaCode" Nullable="true" />
+    <Property Type="Int32" Name="Prefix" Nullable="true" />
+    <Property Type="Int32" Name="Sufix" Nullable="true" />
+    <Property Type="Int32" Name="EmailId" Nullable="true" />
+    <Property Type="String" Name="EmailAddress" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="ModifiedDate" Nullable="false" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="Company_GetById_Result">
+    <Property Type="Int32" Name="CompanyId" Nullable="false" />
+    <Property Type="String" Name="CompanyName" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="PersonId" Nullable="true" />
+    <Property Type="String" Name="OwnerFirstName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="OwnerLastName" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="AddressId" Nullable="true" />
+    <Property Type="String" Name="Street1" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Street2" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="City" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="State" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="ZipCode" Nullable="true" MaxLength="15" />
+    <Property Type="Int32" Name="PhoneId" Nullable="true" />
+    <Property Type="Int32" Name="AreaCode" Nullable="true" />
+    <Property Type="Int32" Name="Prefix" Nullable="true" />
+    <Property Type="Int32" Name="Sufix" Nullable="true" />
+    <Property Type="Int32" Name="EmailId" Nullable="true" />
+    <Property Type="String" Name="EmailAddress" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="Email_GetAllByPersonId_Result">
+    <Property Type="Int32" Name="EmailId" Nullable="false" />
+    <Property Type="Int32" Name="PersonId" Nullable="true" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="Email_GetById_Result">
+    <Property Type="Int32" Name="EmailId" Nullable="false" />
+    <Property Type="Int32" Name="PersonId" Nullable="true" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="People_GetAll_Result">
+    <Property Type="Int32" Name="PersonId" Nullable="false" />
+    <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="LastName" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="BiometricId" Nullable="true" />
+    <Property Type="String" Name="DOB" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="EyeColor" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="HairColor" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="Height" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Weight" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="Person_GetById_Result">
+    <Property Type="Int32" Name="PersonId" Nullable="false" />
+    <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="LastName" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="BiometricId" Nullable="true" />
+    <Property Type="String" Name="DOB" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="EyeColor" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="HairColor" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="Height" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Weight" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="Phone_GetAllByPersonId_Result">
+    <Property Type="Int32" Name="PhoneId" Nullable="false" />
+    <Property Type="Int32" Name="PersonId" Nullable="true" />
+    <Property Type="Int32" Name="AreaCode" Nullable="true" />
+    <Property Type="Int32" Name="Prefix" Nullable="true" />
+    <Property Type="Int32" Name="Sufix" Nullable="true" />
+    <Property Type="String" Name="PhoneType" Nullable="true" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="Phone_GetById_Result">
+    <Property Type="Int32" Name="PhoneId" Nullable="false" />
+    <Property Type="Int32" Name="PersonId" Nullable="true" />
+    <Property Type="Int32" Name="AreaCode" Nullable="true" />
+    <Property Type="Int32" Name="Prefix" Nullable="true" />
+    <Property Type="Int32" Name="Sufix" Nullable="true" />
+  </ComplexType>
+</Schema>
