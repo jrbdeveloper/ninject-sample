@@ -25,7 +25,7 @@ namespace NinjectSimpleSample.Controllers
         {
             //var model = Mapper.Map<List<PersonModel>>(_personDomain.GetAddressBook());
             //return View(model);
-            var model = Mapper.Map<List<PersonModel>>(_personDomain.GetFromRepo());
+            var model = Mapper.Map<List<PersonModel>>(_personDomain.GetAddressBookFromRepo());
             return View(model);
         }
 

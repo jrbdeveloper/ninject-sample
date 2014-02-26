@@ -16,15 +16,23 @@ namespace App.Data.Repos
 
         public List<PersonDTO> GetPeople()
         {
-            var result = from u in context.People
-                         join e in context.Emails on u.EmailId equals e.EmailId into x
-                         from j in x.DefaultIfEmpty()
+            var result = from p in context.People
+                         join e in context.Emails on p.EmailId equals e.EmailId into email
+                         join ph in context.Phones on p.PhoneId equals ph.PhoneId into phone
+                         from j in email.DefaultIfEmpty()
+                         from ph in phone.DefaultIfEmpty()
                          select new PersonDTO
                          {
-                             Id = u.PersonId,
-                             FirstName = u.FirstName,
-                             LastName = u.LastName,
+                             Id = p.PersonId,
+                             FirstName = p.FirstName,
+                             LastName = p.LastName,
                              EmailAddress = (j.Address == null ? string.Empty : j.Address),
+                             Phone = new PhoneDTO
+                             {
+                                 AreaCode = ph.AreaCode,
+                                 Prefix = ph.Prefix,
+                                 Sufix = ph.Sufix
+                             }
                          };
 
             return result.ToList();

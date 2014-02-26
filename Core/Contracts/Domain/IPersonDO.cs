@@ -6,6 +6,6 @@ namespace App.Core.Contracts.Domain
     public interface IPersonDO
     {
         List<PersonDTO> GetAddressBook();
-        List<PersonDTO> GetFromRepo();
+        List<PersonDTO> GetAddressBookFromRepo();
     }
 }

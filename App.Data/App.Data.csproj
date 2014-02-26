@@ -73,6 +73,7 @@
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="DAOs\PersonDAO.cs" />
+    <Compile Include="DataContext.cs" />
     <Compile Include="Email.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>

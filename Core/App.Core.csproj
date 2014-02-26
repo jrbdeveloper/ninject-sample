@@ -43,6 +43,9 @@
     <Compile Include="Contracts\Data\IPersonRepo.cs" />
     <Compile Include="Contracts\Domain\IPersonDO.cs" />
     <Compile Include="DTOs\AddressDTO.cs" />
+    <Compile Include="DTOs\BiometricsDTO.cs" />
+    <Compile Include="DTOs\CompanyDTO.cs" />
+    <Compile Include="DTOs\EmailDTO.cs" />
     <Compile Include="DTOs\PersonDTO.cs" />
     <Compile Include="DTOs\PhoneDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

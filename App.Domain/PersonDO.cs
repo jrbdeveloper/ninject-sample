@@ -26,7 +26,7 @@ namespace App.Domain
             return _personDAO.GetAddressBook();
         }
 
-        public List<PersonDTO> GetFromRepo()
+        public List<PersonDTO> GetAddressBookFromRepo()
         {
             return _personRepo.GetPeople();
         }
