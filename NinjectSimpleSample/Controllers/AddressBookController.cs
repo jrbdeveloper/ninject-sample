@@ -31,7 +31,8 @@ namespace NinjectSimpleSample.Controllers
 
         public ActionResult Details(int id)
         {
-            return View();
+            var model = Mapper.Map<PersonModel>(_personDomain.GetById(id));
+            return View(model);
         }
 
         public ActionResult Create()

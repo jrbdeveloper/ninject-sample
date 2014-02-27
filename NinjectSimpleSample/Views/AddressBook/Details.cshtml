@@ -1,0 +1,37 @@
+﻿@model NinjectSimpleSample.Models.PersonModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Person Details</h2>
+
+<div>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>First Name</dt>
+        <dd>@Html.DisplayFor(model => model.FirstName)</dd>
+
+        <dt>Last Name</dt>
+        <dd>@Html.DisplayFor(model => model.LastName)</dd>
+
+        <dt>Email</dt>
+        <dd>@Html.DisplayFor(model => model.EmailAddress)</dd>
+
+        <dt>Phone</dt>
+        <dd>@Html.DisplayFor(m=>m.Phone.AreaCode) - @Html.DisplayFor(m=>m.Phone.Prefix) - @Html.DisplayFor(m => m.Phone.Sufix)</dd>
+
+        <dt>Address</dt>
+        <dd>
+            @Html.DisplayFor(m => m.Address.Street1)
+            @Html.DisplayFor(m => m.Address.Street2)<br />
+            @Html.DisplayFor(m => m.Address.City), @Html.DisplayFor(m => m.Address.State)<br />
+            @Html.DisplayFor(m => m.Address.ZipCode)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -7,5 +7,6 @@ namespace App.Core.Contracts.Domain
     {
         List<PersonDTO> GetAddressBook();
         List<PersonDTO> GetAddressBookFromRepo();
+        PersonDTO GetById(int Id);
     }
 }

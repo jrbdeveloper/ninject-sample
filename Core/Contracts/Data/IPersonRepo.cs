@@ -8,5 +8,6 @@ namespace App.Core.Contracts.Data
     public interface IPersonRepo
     {
         List<PersonDTO> GetPeople();
+        PersonDTO GetById(int Id);
     }
 }

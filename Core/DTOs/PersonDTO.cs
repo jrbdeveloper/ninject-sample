@@ -9,7 +9,7 @@ namespace Core.DTOs
 
         public string LastName { get; set; }
 
-        public string EmailAddress { get; set; }
+        public EmailDTO Email { get; set; }
 
         public AddressDTO Address { get; set; }
 

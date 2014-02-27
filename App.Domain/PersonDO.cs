@@ -30,6 +30,11 @@ namespace App.Domain
         {
             return _personRepo.GetPeople();
         }
+
+        public PersonDTO GetById(int Id)
+        {
+            return _personRepo.GetById(Id);
+        }
         #endregion
     }
 }
